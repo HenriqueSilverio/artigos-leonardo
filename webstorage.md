@@ -98,21 +98,21 @@ else {
 }
 ```
 
-**Caso você queira verificar quais os navegadores possui compatibilidade segue o link.**
-(http://www.quirksmode.org/html5/storage.html)
+Uma coisa que sempre nos atormenta é o velho IE mais pra isso vi um post no jQuery Brasil.org como utilizar localStorage cross-browser com cookie fallback
 
-**Uma coisa que sempre nos atormenta é o velho IE mais pra isso vi um post no jQuery Brasil.org como utilizar localStorage cross-browser com cookie fallback**
+**Utilizando localStorage cross-browser com cookie fallback**: [Link](http://jquerybrasil.org/jquery-storage-utilizando-localstorage-cross-browser-com-cookie-fallback/) 
 
+-Caso você queira desenvolver com JavaScript puro aqui vai um polyfill que encontrei no github: [polyfill](https://github.com/marcuswestin/store.js)
 
-**Utilizando localStorage cross-browser com cookie fallback** [Link](http://jquerybrasil.org/jquery-storage-utilizando-localstorage-cross-browser-com-cookie-fallback/) 
+** -Caso você queira verificar quais os navegadores possui compatibilidade segue o link.**
+[Tabela de Compatibilidade]http://www.quirksmode.org/html5/storage.html
 
-**Caso você queira desenvolver com JavaScript puro aqui vai um polyfill que encontrei no github.** (https://github.com/marcuswestin/store.js)
-
-**Leia Mais artigos interessantes do Tableless:** (http://tableless.com.br/web-storage-html5/)
+*Leia Mais artigos interessantes do Tableless:* [link](http://tableless.com.br/web-storage-html5/)
 
 ### **Bom este é um artigo curto e simples indicado para iniciantes, espero ter ajudado a vocês a ter uma boa compreensão sobre Web Storage.**
 
 **Fontes:**
+
 [O Guia Definitivo JavaScript](http://www.buscape.com.br/javascript-o-guia-definitivo-david-flanagan-856583719x.html#precos)
 
 [O mestre @zenorocha](http://zenorocha.com/html5-local-storage/)
