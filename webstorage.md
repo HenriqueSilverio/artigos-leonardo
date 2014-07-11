@@ -100,11 +100,11 @@ else {
 
 Uma coisa que sempre nos atormenta é o velho IE mais pra isso vi um post no jQuery Brasil.org como utilizar localStorage cross-browser com cookie fallback
 
-**Utilizando localStorage cross-browser com cookie fallback**: [Link](http://jquerybrasil.org/jquery-storage-utilizando-localstorage-cross-browser-com-cookie-fallback/) 
+[Utilizando localStorage cross-browser com cookie fallback](http://jquerybrasil.org/jquery-storage-utilizando-localstorage-cross-browser-com-cookie-fallback/) 
 
--Caso você queira desenvolver com JavaScript puro aqui vai um polyfill que encontrei no github: [polyfill](https://github.com/marcuswestin/store.js)
+-Pesquisando encontrei polyfill que pode ser uma alternativa para quem deseja trabalhar com JavaScript puro e o legal é que é Cross-browser.: [polyfill](https://github.com/marcuswestin/store.js)
 
-** -Caso você queira verificar quais os navegadores possui compatibilidade segue o link.**
+-Caso você queira verificar quais os navegadores possui compatibilidade segue o link.**
 [Tabela de Compatibilidade]http://www.quirksmode.org/html5/storage.html
 
 *Leia Mais artigos interessantes do Tableless:* [link](http://tableless.com.br/web-storage-html5/)
