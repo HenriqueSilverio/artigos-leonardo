@@ -1,7 +1,7 @@
 Armazenamento do Lado do Cliente
 ===========
 
-O armazenamento do lado do cliente permite que vários aplicativos web utilizem APIs navegadores para fazer o armazenamento local de dados dos usuários no computador e um bom exemplo disso são preferências do usuário.
+O armazenamento local permite que vários aplicativos web utilizem APIs navegadores para fazer o armazenamento local de dados dos usuários no computador e um bom exemplo disso são preferências do usuário.
 
 O armazenamento do lado do cliente é separado por origem, dessa forma as páginas de um site não podem ler os dados armazenados pelas páginas de outro, mas duas páginas do mesmo site podem compartilhar o armazenamento.
 
@@ -18,10 +18,7 @@ Podemos definir como uma API que possui sua origem é definida como parte de HTM
 Para utilizar ele basta configurar uma propriedade do objeto com uma string e o navegador armazena essa string.
 
 **Qual a diferença entre localStorage e sessionStorage?**
-
-A principais diferenças são vida útil e o escopo delas.
-
-Como assim vida útil?
+ A principais diferenças são vida útil e o escopo delas.
 
 ## **localStorage**
 
@@ -38,21 +35,20 @@ Não. Estes dados são armazenados de acordo com cada navegador.Mesmo que eu vis
 Os dados armazenados só existem enquanto o a janela do navegador está aberta ou uma janela por meio de guia. Quando a janela ou guia é fechada permanentemente, os dados armazenados são excluídos.”
 
 **Particularidade:** 
-
 Alguns navegadores modernos possuem o recurso de restaurar a última sessão de navegação desta forma a vida útil desses dados é recuperada com a última sessão
 
-**Escopo:** é a origem do documento, com este escopo os documentos com origens diferentes nunca vão compartilhar sessionStorage. Mas o escopo é definido de acordo com a janela. Se um usuário tem duas guias do navegador mostrando documentos da mesma origem, essa duas guias têm dados de sessionStorage separados: os script que são executados em uma guia não podem ler nem sobrescrever os dados gravados por scripts na outra guia mesmo que as duas guias estejam visitando exatamente a mesma página e executando os mesmos scripts.
+**Escopo:** 
+É a origem do documento, com este escopo os documentos com origens diferentes nunca vão compartilhar sessionStorage. Mas o escopo é definido de acordo com a janela. Se um usuário tem duas guias do navegador mostrando documentos da mesma origem, essa duas guias têm dados de sessionStorage separados: os script que são executados em uma guia não podem ler nem sobrescrever os dados gravados por scripts na outra guia mesmo que as duas guias estejam visitando exatamente a mesma página e executando os mesmos scripts.
 
 **Como Podemos configurar um localStorage e uma sessionStorage?**
+Para configurar uma variável de localStorage ou sessionStorage podemos usar a notação por ponto ```localStorage.nomeDaVariavel``` ou a notação por colchetes ```localStorage['nomeDaVariavel']```.
 
-Para configurar uma variável de localStorage ou sessionStorage podemos usar a notação por ponto *localStorage.nomeDaVariavel* ou a notação por colchetes *localStorage[‘nomeDaVariavel’]*.
-
-*NOTAÇÃO POR PONTOS 
+*Notação por Pontos* 
 
 ```javascript
 //1ª Uma forma Alternativa
-Objeto.nomeDaVariavel = “valor”;
-localStorage.jogador = 'Leonardo';
+Objeto.nomeDaVariavel  = “valor”;
+localStorage.jogador   = 'Leonardo';
 sessionStorage.jogador = 'Leonardo';
 ```
 
@@ -61,32 +57,32 @@ sessionStorage.jogador = 'Leonardo';
 Usando o método setItem do objeto localStorage para atribuir um valor a variável jogador.*/
 
 //O Primeiro argumento é o nome da variável, o segundo é o valor atribuído.
-localStorage.setItem(‘jogador’,’leonardo’);
-sessionStorage.setItem(‘jogador’,’leonardo’);
+localStorage.setItem('jogador','leonardo');
+sessionStorage.setItem('jogador','leonardo');
 ```
 
-*NOTAÇÃO POR COLCHETES
+*Notação por Colchetes*
 
 ```javascript
-Objeto.nomeDaVariavel = “valor”
-localStorage[‘jogador’] = 'Leonardo';
-sessionStorage[‘jogador’] = ‘Leonardo’;
+Objeto.nomeDaVariavel     = 'valor'
+localStorage['jogador']   = 'Leonardo';
+sessionStorage['jogador'] = 'Leonardo';
 ```
 **Limpando o armazenamento localStorage ou sessionStorage?**
 
 ```javascript
-localStorage.clear();   //remove todas as variáveis salvas no objeto localStorage
+localStorage.clear();                //remove todas as variáveis salvas no objeto localStorage
 
-localStorage.removeItem(‘jogador’); //remove uma variável específica no localStorage
+localStorage.removeItem('jogador'); //remove uma variável específica no localStorage
 
-delete localStorage.jogador; //podemos utilizar o operador delete para remover a variável jogador
+delete localStorage.jogador;       //podemos utilizar o operador delete para remover a variável jogador
 ```
 
 **Como reconhecer se o navegador possui suporte ao localStorage?**
 
 -Uma das alternativas que sempre o pessoal recorre é o modernizr. Que é uma biblioteca JavaScript que tem funcionalidade e uma delas é verificar se alguma propriedade HTML5 é suportada no browser utilizado.
 
-[Veja neste link do Tabless] (http://tableless.com.br/utilizando-a-biblioteca-modernizr/) 
+Saiba mais neste link do Tableless:[Utilizando a Biblioteca Modernizr] (http://tableless.com.br/utilizando-a-biblioteca-modernizr/) 
 
 Utilize o script abaixo para verificar se o navegador suporta.
 
@@ -101,9 +97,23 @@ else {
 }
 ```
 
-Caso você queira verificar quais os navegadores possui compatibilidade segue o link.
-
+*Caso você queira verificar quais os navegadores possui compatibilidade segue o link.*
 (http://www.quirksmode.org/html5/storage.html)
 
-Uma coisa que sempre nos atormenta é o velho IE mais pra isso vi um post no jQuery Brasil.org como utilizar localStorage cross-browser com cookie fallback
+*Uma coisa que sempre nos atormenta é o velho IE mais pra isso vi um post no jQuery Brasil.org como utilizar localStorage cross-browser com cookie fallback*
 
+
+Utilizando localStorage cross-browser com cookie fallback [Link](http://jquerybrasil.org/jquery-storage-utilizando-localstorage-cross-browser-com-cookie-fallback/) 
+
+*Caso você queira desenvolver com JavaScript puro aqui vai um polyfill que encontrei no github.* (https://github.com/marcuswestin/store.js)
+
+Leia Mais artigos interessantes do Tableless: (http://tableless.com.br/web-storage-html5/)
+
+Bom este é um artigo curto e simples indicado para iniciantes, espero ter ajudado a vocês a ter uma boa compreensão sobre Web Storage.
+
+**Fontes**
+Guia O Guia Definitivo JavaScript (http://www.buscape.com.br/javascript-o-guia-definitivo-david-flanagan-856583719x.html#precos)
+
+O mestre @zenorocha (http://zenorocha.com/html5-local-storage/)
+
+[MDN] (https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Storage)
