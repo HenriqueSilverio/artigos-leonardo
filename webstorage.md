@@ -112,8 +112,9 @@ Leia Mais artigos interessantes do Tableless: (http://tableless.com.br/web-stora
 Bom este é um artigo curto e simples indicado para iniciantes, espero ter ajudado a vocês a ter uma boa compreensão sobre Web Storage.
 
 **Fontes**
-Guia O Guia Definitivo JavaScript (http://www.buscape.com.br/javascript-o-guia-definitivo-david-flanagan-856583719x.html#precos)
 
-O mestre @zenorocha (http://zenorocha.com/html5-local-storage/)
+[O Guia Definitivo JavaScript](http://www.buscape.com.br/javascript-o-guia-definitivo-david-flanagan-856583719x.html#precos)
+
+[O mestre @zenorocha](http://zenorocha.com/html5-local-storage/)
 
 [MDN] (https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Storage)
