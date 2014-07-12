@@ -13,7 +13,7 @@ Existem várias formas de armazenamento do lado do cliente. Uma das que vamos ab
 
 **O que é Web Storage?**
 
-Podemos definir como uma API que possui sua origem é definida como parte do HTML5, porém desmembrada com outras especificações e foi implementado para rodar também no IE8. Também possui dois objetos que são muito importantes que vamos conhecer logo abaixo ```javascript localStorage``` e ```javascript sessionStorage ```.
+Podemos definir como uma API que possui sua origem é definida como parte do HTML5, porém desmembrada com outras especificações e foi implementado para rodar também no IE8. Também possui dois objetos que são muito importantes que vamos conhecer logo abaixo ``` localStorage``` e ``` sessionStorage ```.
 
 Para utilizar ele basta configurar uma propriedade do objeto com uma string e o navegador armazena essa string.
 
@@ -21,23 +21,23 @@ Para utilizar ele basta configurar uma propriedade do objeto com uma string e o 
 
 A principais diferenças são vida útil e o escopo delas.
 
-Os navegadores que implementão as especificações da Web Storage definiram duas propriedades no objeto  ```javascript window ``` : *localStorage* e *sessionStorage*,  elas referem-se a um objeto storage que é um array associativo que mapeia chaves de string em valores de string.
+Os navegadores que implementão as especificações da Web Storage definiram duas propriedades no objeto  ``` window ``` : *localStorage* e *sessionStorage*,  elas referem-se a um objeto storage que é um array associativo que mapeia chaves de string em valores de string.
 O funcionamento do objeto Storage é bem semelhante ao funcionamento de objetos no JavaScript.
 
 ## **localStorage**
 
-*Vida Útil:* Os dados que são armazenados por localStorage são permanente eles não expiram e continuam armazenados até que algum aplicativo ou  usuário delete as preferências do navegador assim é que são excluídos.
+**Vida Útil:** Os dados que são armazenados por localStorage são permanente eles não expiram e continuam armazenados até que algum aplicativo ou  usuário delete as preferências do navegador assim é que são excluídos.
 
 **Escopo:** Tem como escopo a origem do documento que é definida por seu protocolo, nome de host e porta.
 Todos os documentos com a mesma origem compartilha os mesmo dados de localStorage. Mas documentos com outras origens nunca podem ler escrever nem sobrescrever os dados uns dos outros. Mesmo que ambos sejam executados a partir de um script do mesmo servidor externo.
 
-*Caso utilizemos um navegador e salvarmos um dado localStorage ele armazena em outros navegadores que possuo instalado em minha máquina?*
+**Caso utilizemos um navegador e salvarmos um dado localStorage ele armazena em outros navegadores que possuo instalado em minha máquina?**
 
 Não. Estes dados são armazenados de acordo com cada navegador.Mesmo que eu visite um site utilizando o Firefox e depois visito novamente usando o Chrome, os dados armazenados durante a visita do Firefox não estão acessíveis durante a visita no Chrome.
 
 ## **sessionStorage**
 
-*Vida Útil:* Os dados armazenados só existem enquanto o a janela do navegador está aberta ou uma janela por meio de guia. Quando a janela ou guia é fechada permanentemente, os dados armazenados são excluídos.
+**Vida Útil:** Os dados armazenados só existem enquanto o a janela do navegador está aberta ou uma janela por meio de guia. Quando a janela ou guia é fechada permanentemente, os dados armazenados são excluídos.
 
 **Particularidade:** 
 Alguns navegadores modernos possuem o recurso de restaurar a última sessão de navegação desta forma a vida útil desses dados é recuperada com a última sessão
@@ -53,7 +53,7 @@ Para configurar uma variável de localStorage ou sessionStorage podemos usar a n
 
 ```javascript
 //1ª Uma forma Alternativa
-Objeto.nomeDaVariavel  = “valor”;
+Objeto.nomeDaVariavel  = 'valor';
 localStorage.jogador   = 'Leonardo';
 sessionStorage.jogador = 'Leonardo';
 ```
