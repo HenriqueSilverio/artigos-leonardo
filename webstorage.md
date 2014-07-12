@@ -11,7 +11,7 @@ Os Aplicativos web podem escolher quanto tempo os dados ficam armazenados, dados
 
 Existem várias formas de armazenamento do lado do cliente. Uma das que vamos abordar é a Web Storage. Vale lembrar que ela é uma API que é utilizada para armazenar grande volume de dados, mas não enormes. Vamos ao que interessa.
 
-**O que é Web Storage?**
+## **O que é Web Storage?**
 
 Podemos definir como uma API que possui sua origem é definida como parte do HTML5, porém desmembrada com outras especificações e foi implementado para rodar também no IE8. Também possui dois objetos que são muito importantes que vamos conhecer logo abaixo ``` localStorage``` e ``` sessionStorage ```.
 
@@ -33,7 +33,7 @@ Todos os documentos com a mesma origem compartilha os mesmo dados de localStorag
 
 **Caso utilizemos um navegador e salvarmos um dado localStorage ele armazena em outros navegadores que possuo instalado em minha máquina?**
 
-Não. Estes dados são armazenados de acordo com cada navegador.Mesmo que eu visite um site utilizando o Firefox e depois visito novamente usando o Chrome, os dados armazenados durante a visita do Firefox não estão acessíveis durante a visita no Chrome.
+Não. Estes dados são armazenados de acordo com cada navegador. Mesmo que eu visite um site utilizando o Firefox e depois visito novamente usando o Chrome, os dados armazenados durante a visita do Firefox não estão acessíveis durante a visita no Chrome.
 
 ## **sessionStorage**
 
@@ -59,12 +59,15 @@ sessionStorage.jogador = 'Leonardo';
 ```
 
 ```javascript
-/* 2ª Forma mais Utilizada
-Usando o método setItem do objeto localStorage para atribuir um valor a variável jogador.*/
+/* 2ª Forma mais Utilizada Usando o método setItem do objeto localStorage para atribuir um valor a variável jogador ou getItem para recuperar o valor guardado */
 
 //O Primeiro argumento é o nome da variável, o segundo é o valor atribuído.
 localStorage.setItem('jogador','leonardo');
 sessionStorage.setItem('jogador','leonardo');
+
+Recuperando o valor guardado na variável jogador
+console.log(localStorage.getItem('jogador','leonardo')); 
+console.log(sessionStorage.getItem('jogador','leonardo'));
 ```
 
 - *Notação por Colchetes*
