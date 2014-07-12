@@ -7,13 +7,13 @@ O armazenamento local permite que vários aplicativos web utilizem APIs de naveg
 
 O armazenamento é separado por origem do documento, dessa forma as páginas de um site não podem ler os dados armazenados pelas páginas do outro, mas duas páginas do mesmo site podem compartilhar o armazenamento.
 
-Os Aplicativos web podem escolher quanto tempo os dados ficam armazenados, dados estes que podem ser salvos de forma temporária até que a janela seja fechada ou o navegador encerrado, como também pode ficar alocado no disco rígido de forma permanente para que após meses e anos possamos ter acesso.
+As Aplicações web podem escolher quanto tempo os dados ficam armazenados, dados estes que podem ser salvos de forma temporária até que a janela seja fechada ou o navegador encerrado, como também pode ficar alocado no disco rígido de forma permanente para que após meses e anos possamos ter acesso.
 
 Existem várias formas de armazenamento do lado do cliente. Uma das que vamos abordar é a Web Storage. Vale lembrar que ela é uma API que é utilizada para armazenar grande volume de dados, mas não enormes. Vamos ao que interessa.
 
 ## **O que é Web Storage?**
 
-Podemos definir como uma API que possui sua origem é definida como parte do HTML5, porém desmembrada com outras especificações e foi implementado para rodar também no IE8. Também possui dois objetos que são muito importantes que vamos conhecer ``` localStorage``` e ``` sessionStorage ```.
+Podemos definir como uma API que possui sua origem que é definida como parte do HTML5, porém desmembrada com outras especificações implementadas para rodar também no IE8. Também possui dois objetos que são muito importantes são: ``` localStorage``` e ``` sessionStorage ```.
 
 Os navegadores que implementão as especificações da Web Storage definiram duas propriedades no objeto  ``` window ``` : *localStorage* e *sessionStorage*,  elas referem-se a um objeto storage que é um array associativo que mapeia chaves de string em valores de string.
 O funcionamento do objeto Storage é bem semelhante ao funcionamento de objetos no JavaScript.
@@ -22,15 +22,24 @@ Para utilizar ele basta configurar uma propriedade do objeto com uma string e o 
 
 ## **Qual a diferença entre localStorage e sessionStorage?**
 
-A principais diferenças são vida útil e o escopo delas.
+A principais diferenças são vida útil e o escopo.
 
 
 ## **localStorage**
 
-**Vida Útil:** Os dados que são armazenados por localStorage são permanente eles não expiram e continuam armazenados até que algum aplicativo ou  usuário delete as preferências do navegador assim é que são excluídos.
+**Vida Útil:** Os dados que são armazenados por localStorage são permanente eles não expiram e continuam armazenados até que algum aplicativo ou  usuário delete preferências do navegador.
 
 **Escopo:** Tem como escopo a origem do documento que é definida por seu protocolo, nome de host e porta.
 Todos os documentos com a mesma origem compartilha os mesmo dados de localStorage. Mas documentos com outras origens nunca podem ler escrever nem sobrescrever os dados uns dos outros. Mesmo que ambos sejam executados a partir de um script do mesmo servidor externo.
+
+**Exemplo de diferentes urls que não podem compartilhar o mesmo armazenamento** 
+```javascript
+http://www.exemplo.com         //Protocolo: http;  Nome do Host: www.exemplo.com
+
+https://www.exemplo.com        //Podemos ver que o procotolo https é diferente do http então não pode compartilhar mesmo armazenamento
+http://outroHost.exemplo.com  //Podemos ver que o host é diferente então não pode compartilhar mesmo armazenamento
+http://www.exemplo.com:8080  //Podemos ver que a porta utilizada é diferente da que www.exemplo.com utiliza que é por deafault 80  não pode compartilhar mesmo armazenamento
+```
 
 **Caso utilizemos um navegador e salvarmos um dado localStorage ele armazena em outros navegadores que possuo instalado em minha máquina?**
 
