@@ -13,7 +13,7 @@ Existem várias formas de armazenamento do lado do cliente. Uma das que vamos ab
 
 ## **O que é Web Storage?**
 
-Podemos definir como uma API que possui sua origem que é definida como parte do HTML5, porém desmembrada com outras especificações implementadas para rodar também no IE8. Também possui dois objetos que são muito importantes são: ``` localStorage``` e ``` sessionStorage ```.
+Podemos definir como uma API que possui sua origem que é definida como parte do HTML5, porém desmembrada com outras especificações implementadas para rodar também no IE8 *OBS: no só roda em um servidor web, caso você crie uma página html5 com javascript incluso e armazene algo se você rodar diretamente no navegador o objeto Storage no IE vai ser ```undefined```, sendo que em um servidor local vai armazenar perfeitamente*. Também possui dois objetos que são muito importantes são: ``` localStorage``` e ``` sessionStorage ```.
 
 Os navegadores que implementão as especificações da Web Storage definiram duas propriedades no objeto  ``` window ``` : *localStorage* e *sessionStorage*,  elas referem-se a um objeto storage que é um array associativo que mapeia chaves de string em valores de string.
 O funcionamento do objeto Storage é bem semelhante ao funcionamento de objetos no JavaScript.
@@ -137,20 +137,16 @@ e permitirem que objetos e array sejam armazenados em um *Objeto Storage*.
 
 -Outro motivo é por usar API Storage baseada em métodos é que podemos simular API em cima de outras propriedades nos navegadores que nao suportam web storage.
 
--Se usarmos a API baseada em métodos, vamos poder escrever um script que vai utilize localStorage quando o navegador suportar. Caso ele não possua suporte como no IE vamos armazenar utilizanos os mecanismos que o IE nos oferece que são ```cookies``` ou ```userData```.
+-Se usarmos a API baseada em métodos, vamos poder escrever um script que vai utilize localStorage quando o navegador suportar. Caso ele não possua suporte como no IE vamos armazenar utilizanos os mecanismos que o IE nos oferece que são ```cookies```, mesmo sendo uma alternativas utilizar cookies ou userData não aconselho utilize o jQuery, logo abaixo tem um link que vai te ensinar a deixar o armazenamento cross browser.
 
-> Um simples conceito sobre userData: A Microsfot implementou seu próprio mecanismo de armazenamento no lado do cliente, ele é conhecido como ```userData```, no IE5 e posteriores. A API userData permite o armazenamento de volumes médios de strings de dados e pode ser usada como uma alternativa a Web Storage na versões do IE antes do IE8.
-
-*Alternativa para utilizar um armazenamento dinâmico para cada navegador, logo logo postarei um exemplo dinâmico utilizando localStorage e userDataStorage.*:
-```javascript
-//Descobre qual memória está sendo usada
+//Uma solução par descobir qual memória está sendo usada
 var memoria = window.localStorage || (window.UserDataStorage && new UserDataStorage()) || new CookieStorage();
 
 //seta um valor para jogador 
 memoria.setItem("jogador",'leo');
 
 //Em seguida, pesquisa a variável jogador com a memória utilizada pelo browser;
-var usurario = memoria.getItem("jogador");
+var usuario = memoria.getItem("jogador");
 ```
 
 ### **Uma coisa que sempre nos atormenta é o velho IE mais pra isso vi um post no jQuery Brasil.org como utilizar localStorage cross-browser com cookie fallback**
@@ -163,7 +159,9 @@ var usurario = memoria.getItem("jogador");
 
 [Tabela de Compatibilidade](http://www.quirksmode.org/html5/storage.html)
 
-*Leia Mais artigos interessantes do Tableless:* [link](http://tableless.com.br/web-storage-html5/)
+*Leia Mais artigos interessantes : 
+[Web Storage – HTML5 @tableless](http://tableless.com.br/web-storage-html5/)
+[O PASSADO, PRESENTE & FUTURO DE ARMAZENAMENTO LOCAL PARA APLICAÇÕES WEB](http://diveintohtml5.com.br/storage.html)
 
 ### **Bom este é um artigo curto e simples indicado para iniciantes, espero ter ajudado a vocês a ter uma boa compreensão sobre Web Storage. No próximo artigo abordaremos sobre cookies**
 
