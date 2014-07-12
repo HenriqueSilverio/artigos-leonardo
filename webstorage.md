@@ -34,15 +34,16 @@ Todos os documentos com a mesma origem compartilha os mesmo dados de localStorag
 
 **Exemplo de diferentes urls que não podem compartilhar o mesmo armazenamento** 
 
-```http:www.exemplo.com```    	*Protocolo: http;  Nome do Host: www.exemplo.com*
+```http://www.exemplo.com```    		*Protocolo: http;  Nome do Host: www.exemplo.com*
 
-**Os hosts abaixo não vão poder compartilhar o mesmo armazenamento, pois contem configurações de escopo**
+**Os hosts abaixo não vão poder compartilhar o mesmo armazenamento, pois contem diferentes configurações de escopo**
 
-```https://www.exemplo.com```        *Podemos ver que o procotolo https é diferente do http* 
+```https://www.exemplo.com```        	*Podemos ver que o procotolo https é diferente do http* 
 
-```http://outroHost.exemplo.com```  *Podemos ver que o host é diferente então*
+```http://outroHost.exemplo.com``` 	 	*Podemos ver que o host é diferente então*
 
-```http://www.exemplo.com:8080```  *Podemos ver que a porta utilizada é diferente da que www.exemplo.com utiliza que é por deafault 80*  
+```http://www.exemplo.com:8080```  		*Podemos ver que a porta utilizada é diferente da que www.exemplo.com utiliza que é por deafault 80*  
+
 
 **Caso utilizemos um navegador e salvarmos um dado localStorage ele armazena em outros navegadores que possuo instalado em minha máquina?**
 
@@ -72,7 +73,7 @@ sessionStorage.jogador = 'Leonardo';
 ```
 
 ```javascript
-/* 2ª Forma mais Utilizada Usando o método setItem do objeto localStorage para atribuir um valor a variável jogador ou getItem para recuperar o valor guardado */
+/* 2ª Forma mais Utilizada Usando o método setItem do objeto localStorage para configurar uma variável ou getItem para recuperar o valor guardado */
 
 //O Primeiro argumento é o nome da variável, o segundo é o valor atribuído.
 
@@ -81,8 +82,8 @@ localStorage.setItem('jogador','leonardo');
 sessionStorage.setItem('jogador','leonardo');
 
 //getItem serve para Recuperar ou acessar o valor guardado na variável jogador
-console.log(localStorage.getItem('jogador','leonardo')); 
-console.log(sessionStorage.getItem('jogador','leonardo'));
+localStorage.getItem('jogador','leonardo'); 
+sessionStorage.getItem('jogador','leonardo');
 ```
 
 - *Notação por Colchetes*
@@ -92,6 +93,18 @@ Objeto.nomeDaVariavel     = 'valor'
 localStorage['jogador']   = 'Leonardo';
 sessionStorage['jogador'] = 'Leonardo';
 ```
+
+** Podemos fazer uma iteração utilizando o metodo key() para percorrer todas as variáveis armazenadaa.
+
+```javascript
+for( var i = 0; i < localStorage.length; i++ ){
+
+	var key = localStorage.key(i);			   //Obtém o nome da vaiável
+	var value = localStorage.getItem(key);     //Recupera o valor
+
+}
+```
+
 **Limpando o armazenamento localStorage ou sessionStorage?**
 
 ```javascript
@@ -99,7 +112,7 @@ localStorage.clear();                //remove todas as variáveis salvas no obje
 
 localStorage.removeItem('jogador'); //remove uma variável específica no localStorage
 
-delete localStorage.jogador;       //podemos utilizar o operador delete para remover a variável jogador
+delete localStorage.jogador;       //podemos utilizar o operador delete para remover a variável jogador excete no IE8 
 ```
 
 **Como reconhecer se o navegador possui suporte ao localStorage?**
