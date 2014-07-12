@@ -142,7 +142,7 @@ e permitirem que objetos e array sejam armazenados em um *Objeto Storage*.
 
 > Um simples conceito sobre userData: A Microsfot implementou seu próprio mecanismo de armazenamento no lado do cliente, ele é conhecido como ```userData```, no IE5 e posteriores. A API userData permite o armazenamento de volumes médios de strings de dados e pode ser usada como uma alternativa a Web Storage na versões do IE antes do IE8.
 
-*Alternativa*:
+*Alternativa para utilizar um armazenamento dinâmico para cada navegador, logo logo postarei um exemplo dinâmico utilizando localStorage e userDataStorage.*:
 ```javascript
 //Descobre qual memória está sendo usada
 var memoria = window.localStorage || (window.UserDataStorage && new UserDataStorage()) || new CookieStorage();
@@ -150,6 +150,7 @@ var memoria = window.localStorage || (window.UserDataStorage && new UserDataStor
 //Em seguida, pesquisa a memória;
 var usurario = memoria.getItem("jogador");
 ```
+/
 
 **Uma coisa que sempre nos atormenta é o velho IE mais pra isso vi um post no jQuery Brasil.org como utilizar localStorage cross-browser com cookie fallback**
 
