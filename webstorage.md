@@ -34,12 +34,14 @@ Todos os documentos com a mesma origem compartilha os mesmo dados de localStorag
 
 **Exemplo de diferentes urls que não podem compartilhar o mesmo armazenamento** 
 
-http://www.exemplo.com         //Protocolo: http;  Nome do Host: www.exemplo.com
+```http:www.exemplo.com```    	*Protocolo: http;  Nome do Host: www.exemplo.com*
 
 *Os hosts abaixo não vão poder compartilhar o mesmo armazenamento, pois contem configurações de escopo*
-https://www.exemplo.com        //Podemos ver que o procotolo https é diferente do http 
-http://outroHost.exemplo.com  //Podemos ver que o host é diferente então 
-http://www.exemplo.com:8080  //Podemos ver que a porta utilizada é diferente da que www.exemplo.com utiliza que é por deafault 80  
+```https://www.exemplo.com```        *Podemos ver que o procotolo https é diferente do http* 
+
+```http://outroHost.exemplo.com```  *Podemos ver que o host é diferente então *
+
+```http://www.exemplo.com:8080```  *Podemos ver que a porta utilizada é diferente da que www.exemplo.com utiliza que é por deafault 80*  
 
 **Caso utilizemos um navegador e salvarmos um dado localStorage ele armazena em outros navegadores que possuo instalado em minha máquina?**
 
