@@ -33,13 +33,13 @@ A principais diferenças são vida útil e o escopo.
 Todos os documentos com a mesma origem compartilha os mesmo dados de localStorage. Mas documentos com outras origens nunca podem ler escrever nem sobrescrever os dados uns dos outros. Mesmo que ambos sejam executados a partir de um script do mesmo servidor externo.
 
 **Exemplo de diferentes urls que não podem compartilhar o mesmo armazenamento** 
-```javascript
+
 http://www.exemplo.com         //Protocolo: http;  Nome do Host: www.exemplo.com
 
-https://www.exemplo.com        //Podemos ver que o procotolo https é diferente do http então não pode compartilhar mesmo armazenamento
-http://outroHost.exemplo.com  //Podemos ver que o host é diferente então não pode compartilhar mesmo armazenamento
-http://www.exemplo.com:8080  //Podemos ver que a porta utilizada é diferente da que www.exemplo.com utiliza que é por deafault 80  não pode compartilhar mesmo armazenamento
-```
+*Os hosts abaixo não vão poder compartilhar o mesmo armazenamento, pois contem configurações de escopo*
+https://www.exemplo.com        //Podemos ver que o procotolo https é diferente do http 
+http://outroHost.exemplo.com  //Podemos ver que o host é diferente então 
+http://www.exemplo.com:8080  //Podemos ver que a porta utilizada é diferente da que www.exemplo.com utiliza que é por deafault 80  
 
 **Caso utilizemos um navegador e salvarmos um dado localStorage ele armazena em outros navegadores que possuo instalado em minha máquina?**
 
