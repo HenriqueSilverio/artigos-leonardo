@@ -62,10 +62,12 @@ sessionStorage.jogador = 'Leonardo';
 /* 2ª Forma mais Utilizada Usando o método setItem do objeto localStorage para atribuir um valor a variável jogador ou getItem para recuperar o valor guardado */
 
 //O Primeiro argumento é o nome da variável, o segundo é o valor atribuído.
+
+//setItem serve para configurarmos um localStorage ou sessionStorage
 localStorage.setItem('jogador','leonardo');
 sessionStorage.setItem('jogador','leonardo');
 
-Recuperando o valor guardado na variável jogador
+//Recuperando o valor guardado na variável jogador
 console.log(localStorage.getItem('jogador','leonardo')); 
 console.log(sessionStorage.getItem('jogador','leonardo'));
 ```
