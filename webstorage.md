@@ -137,7 +137,7 @@ e permitirem que objetos e array sejam armazenados em um *Objeto Storage*.
 
 -Outro motivo é por usar API Storage baseada em métodos é que podemos simular API em cima de outras propriedades nos navegadores que nao suportam web storage.
 
--Se usarmos a API baseada em métodos, vamos poder escrever um script que vai utilize localStorage quando o navegador suportar. Caso ele não possua suporte como no IE vamos armazenar utilizanos os mecanismos que o IE nos oferece que são ```cookies```, mesmo sendo alternativas cookies ou userData não aconselho que use, logo abaixo tem um link que vai te ensinar a deixar o armazenamento cross browser.
+-Se usarmos a API baseada em métodos, vamos poder escrever um script que vai utilize localStorage quando o navegador suportar. Caso ele não possua suporte como no IE vamos armazenar utilizanos os mecanismos que o IE nos oferece que são ```cookies```, mesmo sendo alternativas cookies ou userData não os aconselho utilizar, logo abaixo tem um link que vai te ensinar a deixar o armazenamento cross browser.
 
 ```javascript
 //Uma solução par descobir qual memória está sendo usada
