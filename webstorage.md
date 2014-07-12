@@ -161,11 +161,11 @@ var usurario = memoria.getItem("jogador");
 
 **Veja a Tabela de Compatilibidade**
 
-[Tabela de Compatibilidade]http://www.quirksmode.org/html5/storage.html
+[Tabela de Compatibilidade](http://www.quirksmode.org/html5/storage.html)
 
 *Leia Mais artigos interessantes do Tableless:* [link](http://tableless.com.br/web-storage-html5/)
 
-### **Bom este é um artigo curto e simples indicado para iniciantes, espero ter ajudado a vocês a ter uma boa compreensão sobre Web Storage.**
+### **Bom este é um artigo curto e simples indicado para iniciantes, espero ter ajudado a vocês a ter uma boa compreensão sobre Web Storage. No próximo artigo abordaremos sobre cookies além de mais exemplos e as principais diferenças e vantagens de utilizar armazenamento local**
 
 **Fontes:**
 
