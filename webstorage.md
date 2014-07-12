@@ -139,6 +139,7 @@ e permitirem que objetos e array sejam armazenados em um *Objeto Storage*.
 
 -Se usarmos a API baseada em métodos, vamos poder escrever um script que vai utilize localStorage quando o navegador suportar. Caso ele não possua suporte como no IE vamos armazenar utilizanos os mecanismos que o IE nos oferece que são ```cookies```, mesmo sendo uma alternativas utilizar cookies ou userData não aconselho utilize o jQuery, logo abaixo tem um link que vai te ensinar a deixar o armazenamento cross browser.
 
+```
 //Uma solução par descobir qual memória está sendo usada
 var memoria = window.localStorage || (window.UserDataStorage && new UserDataStorage()) || new CookieStorage();
 
