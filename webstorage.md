@@ -7,7 +7,7 @@ O armazenamento local permite que vários aplicativos web utilizem APIs de naveg
 
 O armazenamento é separado por origem do documento, dessa forma as páginas de um site não podem ler os dados armazenados pelas páginas do outro, mas duas páginas do mesmo site podem compartilhar o armazenamento.
 
-As Aplicações web podem escolher quanto tempo os dados ficam armazenados, dados estes que podem ser salvos de forma temporária até que a janela seja fechada ou o navegador encerrado, como também pode ficar alocado no disco rígido de forma permanente para que após meses e anos possamos ter acesso.
+As aplicações web podem escolher quanto tempo os dados ficam armazenados, dados estes que podem ser salvos de forma temporária até que a janela seja fechada ou o navegador encerrado, como também pode ficar alocado no disco rígido de forma permanente para que após meses e anos possamos ter acesso.
 
 Existem várias formas de armazenamento do lado do cliente. Uma das que vamos abordar é a Web Storage. Vale lembrar que ela é uma API que é utilizada para armazenar grande volume de dados, mas não enormes. Vamos ao que interessa.
 
@@ -40,7 +40,7 @@ Todos os documentos com a mesma origem compartilha os mesmo dados de localStorag
 
 ```https://www.exemplo.com```        	*Podemos ver que o procotolo https é diferente do http* 
 
-```http://outroHost.exemplo.com``` 	 	*Podemos ver que o host é diferente então*
+```http://outroHost.exemplo.com``` 	 	*Podemos ver que o host é diferente*
 
 ```http://www.exemplo.com:8080```  		*Podemos ver que a porta utilizada é diferente da que www.exemplo.com utiliza que é por deafault 80*  
 
@@ -66,8 +66,7 @@ Para configurar uma variável de localStorage ou sessionStorage podemos usar a n
 - *Notação por Pontos* 
 
 ```javascript
-//1ª Uma forma Alternativa
-Objeto.nomeDaVariavel  = 'valor';
+//1ª Uma forma Alternativa -> Objeto.nomeDaVariavel  = 'valor';
 localStorage.jogador   = 'Leonardo';
 sessionStorage.jogador = 'Leonardo';
 ```
@@ -89,12 +88,12 @@ sessionStorage.getItem('jogador','leonardo');
 - *Notação por Colchetes*
 
 ```javascript
-Objeto.nomeDaVariavel     = 'valor'
+//Objeto.nomeDaVariavel     = 'valor'
 localStorage['jogador']   = 'Leonardo';
 sessionStorage['jogador'] = 'Leonardo';
 ```
 
-**Podemos fazer uma iteração utilizando o metodo key() para percorrer todas as variáveis armazenada.**
+**Podemos fazer uma iteração utilizando o metodo key() para percorrer todas as variáveis armazenadas no localStorage.**
 
 ```javascript
 for( var i = 0; i < localStorage.length; i++ ){
@@ -112,7 +111,7 @@ localStorage.clear();                //remove todas as variáveis salvas no obje
 
 localStorage.removeItem('jogador'); //remove uma variável específica no localStorage
 
-delete localStorage.jogador;       //podemos utilizar o operador delete para remover a variável jogador excete no IE8 
+delete localStorage.jogador;       //podemos utilizar o operador delete para remover a variável jogador exceto no IE8 não funciona
 ```
 
 ### **Como reconhecer se o navegador possui suporte ao localStorage?** 
@@ -147,18 +146,20 @@ e permitirem que objetos e array sejam armazenados em um *Objeto Storage*.
 //Descobre qual memória está sendo usada
 var memoria = window.localStorage || (window.UserDataStorage && new UserDataStorage()) || new CookieStorage();
 
-//Em seguida, pesquisa a memória;
+//seta um valor para jogador 
+memoria.setItem("jogador",'leo');
+
+//Em seguida, pesquisa a variável jogador com a memória utilizada pelo browser;
 var usurario = memoria.getItem("jogador");
 ```
-/
 
-**Uma coisa que sempre nos atormenta é o velho IE mais pra isso vi um post no jQuery Brasil.org como utilizar localStorage cross-browser com cookie fallback**
-
+### **Uma coisa que sempre nos atormenta é o velho IE mais pra isso vi um post no jQuery Brasil.org como utilizar localStorage cross-browser com cookie fallback**
 [Utilizando localStorage cross-browser com cookie fallback](http://jquerybrasil.org/jquery-storage-utilizando-localstorage-cross-browser-com-cookie-fallback/) 
 
--Pesquisando encontrei polyfill que pode ser uma alternativa para quem deseja trabalhar com JavaScript puro e o legal é que é Cross-browser: [polyfill](https://github.com/marcuswestin/store.js)
+-Pesquisando encontrei polyfill que pode ser uma alternativa para quem deseja trabalhar com JavaScript puro: [polyfill](https://github.com/marcuswestin/store.js)
 
-**-Caso você queira verificar quais os navegadores possui compatibilidade segue o link.**
+
+**Veja a Tabela de Compatilibidade**
 
 [Tabela de Compatibilidade]http://www.quirksmode.org/html5/storage.html
 
