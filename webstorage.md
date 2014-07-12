@@ -166,7 +166,7 @@ var usuario = memoria.getItem("jogador");
 
 [O PASSADO, PRESENTE & FUTURO DE ARMAZENAMENTO LOCAL PARA APLICAÇÕES WEB](http://diveintohtml5.com.br/storage.html)
 
-### **Bom este é um artigo curto e simples indicado para iniciantes, espero ter ajudado a vocês a ter uma boa compreensão sobre Web Storage. No próximo artigo abordaremos sobre cookies**
+### **Bom este é um artigo curto e simples indicado para iniciantes, espero ter ajudado a vocês a ter uma boa compreensão sobre Web Storage. Faça sua contribuição ou indique para um amigo, pois você estará compartilhando conhecimento.**
 
 **Fontes:**
 
