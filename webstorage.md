@@ -3,23 +3,26 @@
 Armazenamento do Lado do Cliente
 ===========
 
-O armazenamento local permite que vários aplicativos web utilizem APIs dos navegadores para fazer o armazenamento local de dados dos usuários no computador e um bom exemplo disso são preferências do usuário.
+O armazenamento local permite que vários aplicativos web utilizem APIs de navegadores para fazer o armazenamento local de dados dos usuários no computador e um bom exemplo disso são preferências do usuário.
 
-O armazenamento do lado do cliente é separado por origem, dessa forma as páginas de um site não podem ler os dados armazenados pelas páginas de outro, mas duas páginas do mesmo site podem compartilhar o armazenamento.
+O armazenamento é separado por origem do documento, dessa forma as páginas de um site não podem ler os dados armazenados pelas páginas do outro, mas duas páginas do mesmo site podem compartilhar o armazenamento.
 
-Os Aplicativos web podem escolher quanto tempo os dados ficam armazenados, dados estes que podem ser salvos de forma temporária até que a janela seja fechada ou o navegador encerrado, como também pode ficar armazenado no disco rígido de forma permanente para que após meses e anos possamos ter acesso.
+Os Aplicativos web podem escolher quanto tempo os dados ficam armazenados, dados estes que podem ser salvos de forma temporária até que a janela seja fechada ou o navegador encerrado, como também pode ficar alocado no disco rígido de forma permanente para que após meses e anos possamos ter acesso.
 
-Existem Várias formas de armazenamento do lado do cliente. Uma das que vamos abordar é a Web Storage. Vale lembrar que ela é uma API que é utilizada para armazenar grande volume de dados, mas não enormes. Vamos ao que interessa.
+Existem várias formas de armazenamento do lado do cliente. Uma das que vamos abordar é a Web Storage. Vale lembrar que ela é uma API que é utilizada para armazenar grande volume de dados, mas não enormes. Vamos ao que interessa.
 
 **O que é Web Storage?**
 
-Podemos definir como uma API que possui sua origem é definida como parte do HTML5, porém desmembrada com outras especificações e foi implementado para rodar também no IE8. Também possui dois objetos que são muito importantes que vamos conhecer logo abaixo localStorage e sessionStorage.
+Podemos definir como uma API que possui sua origem é definida como parte do HTML5, porém desmembrada com outras especificações e foi implementado para rodar também no IE8. Também possui dois objetos que são muito importantes que vamos conhecer logo abaixo ```javascript localStorage``` e ```javascript sessionStorage ```.
 
 Para utilizar ele basta configurar uma propriedade do objeto com uma string e o navegador armazena essa string.
 
 ## **Qual a diferença entre localStorage e sessionStorage?**
 
 A principais diferenças são vida útil e o escopo delas.
+
+Os navegadores que implementão as especificações da Web Storage definiram duas propriedades no objeto  ```javascript window ``` : *localStorage* e *sessionStorage*,  elas referem-se a um objeto storage que é um array associativo que mapeia chaves de string em valores de string.
+O funcionamento do objeto Storage é bem semelhante ao funcionamento de objetos no JavaScript.
 
 ## **localStorage**
 
