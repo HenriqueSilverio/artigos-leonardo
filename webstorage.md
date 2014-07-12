@@ -13,7 +13,10 @@ Existem várias formas de armazenamento do lado do cliente. Uma das que vamos ab
 
 ## **O que é Web Storage?**
 
-Podemos definir como uma API que possui sua origem é definida como parte do HTML5, porém desmembrada com outras especificações e foi implementado para rodar também no IE8. Também possui dois objetos que são muito importantes que vamos conhecer logo abaixo ``` localStorage``` e ``` sessionStorage ```.
+Podemos definir como uma API que possui sua origem é definida como parte do HTML5, porém desmembrada com outras especificações e foi implementado para rodar também no IE8. Também possui dois objetos que são muito importantes que vamos conhecer ``` localStorage``` e ``` sessionStorage ```.
+
+Os navegadores que implementão as especificações da Web Storage definiram duas propriedades no objeto  ``` window ``` : *localStorage* e *sessionStorage*,  elas referem-se a um objeto storage que é um array associativo que mapeia chaves de string em valores de string.
+O funcionamento do objeto Storage é bem semelhante ao funcionamento de objetos no JavaScript.
 
 Para utilizar ele basta configurar uma propriedade do objeto com uma string e o navegador armazena essa string.
 
@@ -21,8 +24,6 @@ Para utilizar ele basta configurar uma propriedade do objeto com uma string e o 
 
 A principais diferenças são vida útil e o escopo delas.
 
-Os navegadores que implementão as especificações da Web Storage definiram duas propriedades no objeto  ``` window ``` : *localStorage* e *sessionStorage*,  elas referem-se a um objeto storage que é um array associativo que mapeia chaves de string em valores de string.
-O funcionamento do objeto Storage é bem semelhante ao funcionamento de objetos no JavaScript.
 
 ## **localStorage**
 
@@ -67,7 +68,7 @@ sessionStorage.jogador = 'Leonardo';
 localStorage.setItem('jogador','leonardo');
 sessionStorage.setItem('jogador','leonardo');
 
-//Recuperando o valor guardado na variável jogador
+//getItem serve para Recuperar ou acessar o valor guardado na variável jogador
 console.log(localStorage.getItem('jogador','leonardo')); 
 console.log(sessionStorage.getItem('jogador','leonardo'));
 ```
