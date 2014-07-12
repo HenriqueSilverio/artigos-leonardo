@@ -81,7 +81,7 @@ sessionStorage.jogador = 'Leonardo';
 localStorage.setItem('jogador','leonardo');
 sessionStorage.setItem('jogador','leonardo');
 
-//getItem serve para Recuperar ou acessar o valor guardado na variável jogador
+//getItem serve para acessar o valor guardado na variável jogador
 localStorage.getItem('jogador','leonardo'); 
 sessionStorage.getItem('jogador','leonardo');
 ```
@@ -94,12 +94,12 @@ localStorage['jogador']   = 'Leonardo';
 sessionStorage['jogador'] = 'Leonardo';
 ```
 
-** Podemos fazer uma iteração utilizando o metodo key() para percorrer todas as variáveis armazenadaa.
+**Podemos fazer uma iteração utilizando o metodo key() para percorrer todas as variáveis armazenada.**
 
 ```javascript
 for( var i = 0; i < localStorage.length; i++ ){
 
-	var key = localStorage.key(i);			   //Obtém o nome da vaiável
+	var key   = localStorage.key(i);			//Obtém o nome da vaiável
 	var value = localStorage.getItem(key);     //Recupera o valor
 
 }
@@ -115,11 +115,9 @@ localStorage.removeItem('jogador'); //remove uma variável específica no localS
 delete localStorage.jogador;       //podemos utilizar o operador delete para remover a variável jogador excete no IE8 
 ```
 
-**Como reconhecer se o navegador possui suporte ao localStorage?**
+### **Como reconhecer se o navegador possui suporte ao localStorage?** 
 
--Uma das alternativas que sempre o pessoal recorre é o modernizr. Que é uma biblioteca JavaScript que tem funcionalidade e uma delas é verificar se alguma propriedade HTML5 é suportada no browser utilizado.
-
-Saiba mais neste link do Tableless: [Utilizando a Biblioteca Modernizr] (http://tableless.com.br/utilizando-a-biblioteca-modernizr/) 
+-Uma das alternativas que sempre o pessoal recorre a ```modernizr```. Que é uma biblioteca JavaScript que tem funcionalidade e uma delas é verificar se alguma propriedade HTML5 é suportada no browser utilizado. Saiba mais neste link do Tableless: [Utilizando a Biblioteca Modernizr] (http://tableless.com.br/utilizando-a-biblioteca-modernizr/) 
 
 Utilize o script abaixo para verificar se o navegador suporta.
 
@@ -134,13 +132,24 @@ else {
 }
 ```
 
+###** Porque usar getItem e setItem?**
+Um dos principais motivos é no caso de os navegadores implementarem todas as especificações
+e permitirem que objetos e array sejam armazenados em um *Objeto Storage*.
+
+> Outro motivo é por usar API Storage baseada em métodos é que podemos simular API em cima de outras propriedades nos navagadores que nao suportam web storage.
+>Se usarmos a API baseada em métodos, vamos poder escrever um script que vai utilize localStorage quando o navegador suporatar. caso ele não possua suporte como no IE vamos armazenar utilizanos os mecanismos que o IE nos oferece que são ```cookies``` ou ```userData```.
+> Um simples conceito sobre userData: A Microsfot implementou seu próprio mecanismo de armazenamento no lado do cliente, ele é conhecido como ```userData```, no IE5 e posteriores. A API userData permite o armazenamento de volumes médios de strings de dados e pode ser usada como uma alternativa a Web Storage na versões do IE antes do IE8.
+
+
+
 Uma coisa que sempre nos atormenta é o velho IE mais pra isso vi um post no jQuery Brasil.org como utilizar localStorage cross-browser com cookie fallback
 
 [Utilizando localStorage cross-browser com cookie fallback](http://jquerybrasil.org/jquery-storage-utilizando-localstorage-cross-browser-com-cookie-fallback/) 
 
--Pesquisando encontrei polyfill que pode ser uma alternativa para quem deseja trabalhar com JavaScript puro e o legal é que é Cross-browser.: [polyfill](https://github.com/marcuswestin/store.js)
+-Pesquisando encontrei polyfill que pode ser uma alternativa para quem deseja trabalhar com JavaScript puro e o legal é que é Cross-browser: [polyfill](https://github.com/marcuswestin/store.js)
 
--Caso você queira verificar quais os navegadores possui compatibilidade segue o link.**
+**-Caso você queira verificar quais os navegadores possui compatibilidade segue o link.**
+
 [Tabela de Compatibilidade]http://www.quirksmode.org/html5/storage.html
 
 *Leia Mais artigos interessantes do Tableless:* [link](http://tableless.com.br/web-storage-html5/)
