@@ -132,12 +132,14 @@ else {
 }
 ```
 
-###** Porque usar getItem e setItem?**
-Um dos principais motivos é no caso de os navegadores implementarem todas as especificações
+###Porque usar getItem e setItem?
+Um dos principais motivos é quando os navegadores implementarem todas as especificações
 e permitirem que objetos e array sejam armazenados em um *Objeto Storage*.
 
-> Outro motivo é por usar API Storage baseada em métodos é que podemos simular API em cima de outras propriedades nos navagadores que nao suportam web storage.
->Se usarmos a API baseada em métodos, vamos poder escrever um script que vai utilize localStorage quando o navegador suporatar. caso ele não possua suporte como no IE vamos armazenar utilizanos os mecanismos que o IE nos oferece que são ```cookies``` ou ```userData```.
+-Outro motivo é por usar API Storage baseada em métodos é que podemos simular API em cima de outras propriedades nos navegadores que nao suportam web storage.
+
+-Se usarmos a API baseada em métodos, vamos poder escrever um script que vai utilize localStorage quando o navegador suportar. Caso ele não possua suporte como no IE vamos armazenar utilizanos os mecanismos que o IE nos oferece que são ```cookies``` ou ```userData```.
+
 > Um simples conceito sobre userData: A Microsfot implementou seu próprio mecanismo de armazenamento no lado do cliente, ele é conhecido como ```userData```, no IE5 e posteriores. A API userData permite o armazenamento de volumes médios de strings de dados e pode ser usada como uma alternativa a Web Storage na versões do IE antes do IE8.
 
 
