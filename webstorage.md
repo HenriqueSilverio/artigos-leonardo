@@ -1,4 +1,4 @@
-![webstorage](../img/webstorage.jpg)
+![webstorage](img/webstorage.jpg)
 
 Armazenamento do Lado do Cliente
 ===========
