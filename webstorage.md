@@ -13,9 +13,11 @@ Existem várias formas de armazenamento do lado do cliente. Uma das que vamos ab
 
 ## **O que é Web Storage?**
 
-Podemos definir como uma API que possui sua origem que é definida como parte do HTML5, porém desmembrada com outras especificações implementadas para rodar também no IE8 *OBS: no só roda em um servidor web, caso você crie uma página html5 com javascript incluso e armazene algo se você rodar diretamente no navegador o objeto Storage no IE vai ser ```undefined```, sendo que em um servidor local vai armazenar perfeitamente*. Também possui dois objetos que são muito importantes são: ``` localStorage``` e ``` sessionStorage ```.
+Podemos definir como uma API que possui sua origem que é definida como parte do HTML5, porém desmembrada com outras especificações implementadas para rodar também no IE8. Também possui dois objetos que são muito importantes são: ``` localStorage``` e ``` sessionStorage ```.
 
-Os navegadores que implementão as especificações da Web Storage definiram duas propriedades no objeto  ``` window ``` : *localStorage* e *sessionStorage*,  elas referem-se a um objeto storage que é um array associativo que mapeia chaves de string em valores de string.
+>OBS: Se tentarmos abrir o arquivo direto no navegador (via file://) o objeto Storage no IE vai ser ```undefined```, então o armazenamento só vai funcionar se iniciarmos um servidor local por exemplo com Python: [link](https://gist.github.com/fdaciuk/10000330).
+
+Os navegadores que implementam as especificações da Web Storage definem duas propriedades no objeto  ``` window ``` : *localStorage* e *sessionStorage*,  elas referem-se a um objeto storage que é um array associativo que mapeia chaves de string em valores de string.
 O funcionamento do objeto Storage é bem semelhante ao funcionamento de objetos no JavaScript.
 
 Para utilizar ele basta configurar uma propriedade do objeto com uma string e o navegador armazena essa string.
